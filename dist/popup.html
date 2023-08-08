@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App Store Scrape</title>
+    <style>
+        textarea {
+            width: 450px;
+            height: 200px;
+            background: #111;
+            color: #fff;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #777;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+
+        #searchTerm {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    <input type="text" id="searchTerm" placeholder="Enter search term">
+    </div>
+    <br>
+    <div>
+        <div>
+            <button id="startButton">Start Scraping</button>
+            <button id="stopButton">Stop Scraping</button>
+        </div>
+        <br>
+        <div>
+            <button id="downloadButton">Download CSV</button>
+            <button id="clearButton">Clear CSV</button>
+        </div>
+    </div>
+    <br>
+    <div>Found App: <span id="count">0</span></div>
+    <br>
+    <div id="timer">00:00:00</div>
+    <br>
+    <label>Log Entries</label>
+    <textarea id="log" readonly></textarea>
+    <script src="popup.js"></script>
+</body>
+
+</html>
